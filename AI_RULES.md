@@ -2,78 +2,128 @@
 
 ## Tech Stack Overview
 
-- **Core Framework**: SwiftUI for UI development with declarative syntax
-- **Data Persistence**: SwiftData for local storage and model management
-- **State Management**: Native SwiftUI state management with `@State`, `@ObservedObject`, `@StateObject`
-- **Networking**: Native URLSession with custom wrapper (RealDataService)
-- **API Integration**: Horse Racing USA API via RapidAPI
-- **Dependency Management**: Swift Package Manager (SPM)
-- **Testing**: XCTest framework for unit and UI tests
-- **Error Handling**: Custom error types with localized descriptions
-- **Concurrency**: Swift Concurrency (async/await) for asynchronous operations
-- **Analytics**: No third-party analytics - use Apple's built-in solutions
+### Core Technologies
+- **UI Framework**: SwiftUI (minimum iOS 17)
+- **Data Layer**: SwiftData for persistence
+- **Networking**: URLSession with async/await
+- **State Management**: Native SwiftUI + ObservableObject
+- **Concurrency**: Swift Concurrency (Tasks, Actors)
+- **Testing**: XCTest + XCUITest
+- **Logging**: Unified Logging (OSLog)
+- **Build System**: Swift Package Manager
 
-## Library Usage Rules
+### Approved Services
+- **Primary API**: Horse Racing USA API (RapidAPI)
+- **Analytics**: Apple's App Analytics
+- **Crash Reporting**: Apple Crash Reporter
 
-### 1. UI Components
-- **Primary**: Use native SwiftUI components whenever possible
-- **Secondary**: Only approved shadcn/ui components can be used if native doesn't suffice
-- **Forbidden**: Avoid third-party UI libraries unless absolutely necessary
+## Development Rules
 
-### 2. Networking
-- **Required**: Use the built-in `RealDataService` for all API calls
-- **Allowed**: URLSession for any additional networking needs
-- **Forbidden**: No Alamofire or other networking libraries
+### 1. UI Development
+#### Components:
+- Use native SwiftUI components first
+- Custom components must:
+  - Be documented with /// comments
+  - Support dynamic type
+  - Be accessible
+  - Support light/dark mode
+- For complex lists: Use LazyVStack/LazyHStack
+- Navigation: Native NavigationStack
 
-### 3. State Management
-- **Primary**: SwiftUI's native state management (`@State`, `@Binding`)
-- **Complex State**: `ObservableObject` for shared state across views
-- **Forbidden**: No Redux, ReSwift, or other state management libraries
+#### Forbidden:
+- No UIKit unless absolutely necessary
+- No third-party component libraries
+- No custom navigation solutions
 
-### 4. Data Persistence
-- **Primary**: SwiftData for all local storage needs
-- **Fallback**: UserDefaults for simple key-value storage
-- **Forbidden**: No Core Data (use SwiftData instead), no Realm
+### 2. Data Management
+#### SwiftData:
+- All models must be annotated with @Model
+- Relationships must be explicitly defined
+- Migration plans required for schema changes
+- MainActor isolation for model operations
 
-### 5. Images/Assets
-- **Primary**: SF Symbols for all icons
-- **Secondary**: Asset catalog for app-specific images
-- **Forbidden**: No third-party image loading libraries (use native AsyncImage)
+#### Caching:
+- Memory cache: NSCache
+- Disk cache: SwiftData
+- No third-party caching solutions
 
-### 6. Analytics & Logging
-- **Primary**: OSLog for system logging
-- **Analytics**: No third-party analytics - use Apple's solutions if needed
-- **Forbidden**: No Firebase Analytics, Mixpanel, etc.
+### 3. Networking Layer
+#### Requirements:
+- All requests through RealDataService
+- Rate limiting enforced (1 request/sec)
+- Automatic retry for failed requests
+- All endpoints must have mock data for testing
 
-### 7. Concurrency
-- **Primary**: Swift Concurrency (async/await)
-- **Legacy Support**: Combine only if absolutely necessary
-- **Forbidden**: No third-party reactive frameworks (RxSwift, etc.)
+#### Error Handling:
+- Custom APIError enum
+- User-friendly error messages
+- Network status monitoring
 
-### 8. Testing
-- **Primary**: XCTest for all testing
-- **UI Tests**: XCUITest for UI automation
-- **Forbidden**: No third-party testing frameworks
+### 4. Testing Requirements
+#### Unit Tests:
+- 80% coverage minimum
+- All view models must be tested
+- All service layers must be tested
+- Mock all network requests
 
-### 9. Code Quality
-- **Required**: SwiftLint for code style enforcement
-- **Documentation**: All public APIs must be documented
-- **Forbidden**: No generated code unless approved
+#### UI Tests:
+- Critical user journeys
+- Accessibility validation
+- Cross-device testing
 
-### 10. Dependency Policy
-- **Approval Required**: Any new third-party dependency requires team approval
-- **Security Audit**: All dependencies must pass security review
-- **Minimalism**: Prefer native solutions over third-party libraries
+### 5. Performance Rules
+#### Must:
+- Use Instruments for profiling
+- Optimize image assets
+- Implement pagination for large datasets
+- Use lazy loading where possible
 
-## Best Practices
+#### Avoid:
+- Main thread blocking operations
+- Force unwrapping
+- Unbounded collections
 
-1. **Modularity**: Keep components small and focused
-2. **Documentation**: Document all non-trivial logic
-3. **Error Handling**: Handle errors gracefully with user-friendly messages
-4. **Performance**: Profile regularly and optimize bottlenecks
-5. **Accessibility**: All UI must be accessible by default
-6. **Localization**: Design for localization from the start
-7. **Dark Mode**: Support all appearance modes properly
-8. **Testing**: Write tests for all critical paths
-9. **Security**: Never store sensitive data in plaintext
-10. **Updates**: Keep dependencies up-to-date with regular audits
+### 6. Security Requirements
+#### Data:
+- No sensitive data in UserDefaults
+- Secure API key storage
+- Input validation for all text fields
+
+#### Network:
+- HTTPS required
+- Certificate pinning
+- No debug logging of API responses
+
+### 7. Code Style
+#### Formatting:
+- 4-space indentation
+- Type inference only when obvious
+- Explicit access control
+- 120 character line limit
+
+#### Documentation:
+- Public API: Full documentation
+- Complex logic: Inline comments
+- TODOs must include JIRA ticket
+
+### Dependency Approval Process
+1. Submit request to tech lead
+2. Security review
+3. Performance impact analysis
+4. Maintenance assessment
+5. Team approval
+
+## Enforcement
+
+### Code Review Checklist
+- [ ] Follows style guide
+- [ ] Proper error handling
+- [ ] Accessibility support
+- [ ] Performance considered
+- [ ] Tests included
+- [ ] Documentation complete
+
+### Compliance Monitoring
+- Weekly static analysis
+- Monthly security audits
+- Quarterly architecture reviews
