@@ -1,0 +1,185 @@
+{"app_name":"poni","timestamp":"2025-07-14 23:07:00.00 -0700","app_version":"1.0","slice_uuid":"b7fbbb80-342a-36fa-8bdd-e8f3c481b3ae","build_version":"1","platform":7,"bundleID":"com.cha.poni","share_with_app_devs":0,"is_first_party":0,"bug_type":"309","os_version":"macOS 26.0 (25A5306g)","roots_installed":0,"name":"poni","incident_id":"0BE31ECA-0FDA-4BEE-BD7E-F66836C39DCD"}
+{
+  "uptime" : 180000,
+  "procRole" : "Foreground",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "Mac16,8",
+  "coalitionID" : 52997,
+  "osVersion" : {
+    "train" : "macOS 26.0",
+    "build" : "25A5306g",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2025-07-14 23:06:59.1136 -0700",
+  "codeSigningMonitor" : 2,
+  "incident" : "0BE31ECA-0FDA-4BEE-BD7E-F66836C39DCD",
+  "pid" : 11634,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2025-07-14 23:06:58.3912 -0700",
+  "procStartAbsTime" : 4490101880637,
+  "procExitAbsTime" : 4490119204717,
+  "procName" : "poni",
+  "procPath" : "\/Users\/USER\/Library\/Developer\/CoreSimulator\/Devices\/2AF45755-318F-48B6-8449-018E23D01D8A\/data\/Containers\/Bundle\/Application\/EADF29CE-E8E7-41A4-9F44-21ECF57770DE\/poni.app\/poni",
+  "bundleInfo" : {"CFBundleShortVersionString":"1.0","CFBundleVersion":"1","CFBundleIdentifier":"com.cha.poni"},
+  "storeInfo" : {"deviceIdentifierForVendor":"40F8675B-38CD-5936-90A7-C482D62E1C4C","thirdParty":true},
+  "parentProc" : "launchd_sim",
+  "parentPid" : 10598,
+  "coalitionName" : "com.apple.CoreSimulator.SimDevice.2AF45755-318F-48B6-8449-018E23D01D8A",
+  "crashReporterKey" : "DD8C8F2D-C323-B9BA-414B-1989AD1C8EB2",
+  "developerMode" : 1,
+  "responsiblePid" : 5778,
+  "responsibleProc" : "SimulatorTrampoline",
+  "codeSigningID" : "com.cha.poni",
+  "codeSigningTeamID" : "",
+  "codeSigningFlags" : 570425857,
+  "codeSigningValidationCategory" : 10,
+  "codeSigningTrustLevel" : 4294967295,
+  "codeSigningAuxiliaryInfo" : 0,
+  "instructionByteStream" : {"beforePC":"IAAg1IEF+LfpAwC54gMDquMDBKrkAwWq5QMGquYDB6rnAwiq6AIAlA==","atPC":"IAAg1IgSgFL\/EwC56AcA+UgAgFLoAwA5oCAA8ABQEpGjIADwY0AdkQ=="},
+  "bootSessionUUID" : "941E9784-5D39-4C99-A22F-2F66A30719B9",
+  "sip" : "enabled",
+  "exception" : {"codes":"0x0000000000000001, 0x00000001957e5d2c","rawCodes":[1,6803053868],"type":"EXC_BREAKPOINT","signal":"SIGTRAP"},
+  "termination" : {"flags":0,"code":5,"namespace":"SIGNAL","indicator":"Trace\/BPT trap: 5","byProc":"exc handler","byPid":11634},
+  "os_fault" : {"process":"poni"},
+  "ktriageinfo" : "VM - (arg = 0x3) mach_vm_allocate_kernel failed within call to vm_map_enter\nVM - (arg = 0x3) mach_vm_allocate_kernel failed within call to vm_map_enter\nVM - (arg = 0x3) mach_vm_allocate_kernel failed within call to vm_map_enter\n",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":1542,"task_for_pid":27},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":9786584,"threadState":{"x":[{"value":105553181282056},{"value":8589934595},{"value":0},{"value":105553169744448},{"value":105553169744448},{"value":19},{"value":32},{"value":0},{"value":18446744065119617024},{"value":8589934595},{"value":3},{"value":480},{"value":2043},{"value":2045},{"value":3649247236},{"value":3647148037},{"value":3649044480},{"value":4},{"value":0},{"value":8376054112,"symbolLocation":5840,"symbol":"InitialAllocationPool"},{"value":6095658352},{"value":105553156123232},{"value":1152921500312555108},{"value":1},{"value":0},{"value":6095659152},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6803053868},"cpsr":{"value":1610612736},"fp":{"value":6095658096},"sp":{"value":6095657968},"esr":{"value":4060086273,"description":"(Breakpoint) brk 1"},"pc":{"value":6803053868,"matchesCrashFrame":1},"far":{"value":0}},"frames":[{"imageOffset":175404,"symbol":"_assertionFailure(_:_:file:line:flags:)","symbolLocation":156,"imageIndex":7},{"imageOffset":1012272,"sourceLine":21,"sourceFile":"poniApp.swift","symbol":"poniApp.init()","imageIndex":2,"symbolLocation":804},{"imageOffset":1013712,"sourceFile":"\/<compiler-generated>","symbol":"protocol witness for App.init() in conformance poniApp","symbolLocation":20,"imageIndex":2},{"imageOffset":6184372,"symbol":"static App.main()","symbolLocation":132,"imageIndex":8},{"imageOffset":1013552,"sourceFile":"\/<compiler-generated>","symbol":"static poniApp.$main()","symbolLocation":40,"imageIndex":2},{"imageOffset":1013744,"sourceFile":"poniApp.swift","symbol":"__debug_main_executable_dylib_entry_point","symbolLocation":12,"imageIndex":2},{"imageOffset":4372616148,"imageIndex":9},{"imageOffset":35108,"symbol":"start","symbolLocation":6400,"imageIndex":0}]},{"id":9786656,"frames":[{"imageOffset":6532,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":5}],"threadState":{"x":[{"value":6096220160},{"value":4611},{"value":6095683584},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":0},"fp":{"value":0},"sp":{"value":6096220160},"esr":{"value":1442840704,"description":"(PC alignment)"},"pc":{"value":4371339652},"far":{"value":0}}},{"id":9786673,"frames":[{"imageOffset":6532,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":5}],"threadState":{"x":[{"value":6096793600},{"value":0},{"value":6096257024},{"value":0},{"value":278532},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":0},"fp":{"value":0},"sp":{"value":6096793600},"esr":{"value":0},"pc":{"value":4371339652},"far":{"value":0}}}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4373856256,
+    "size" : 655360,
+    "uuid" : "ff357121-622e-3ea0-9ef0-8d706f44dc1a",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4371218432,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.cha.poni",
+    "size" : 16384,
+    "uuid" : "b7fbbb80-342a-36fa-8bdd-e8f3c481b3ae",
+    "path" : "\/Users\/USER\/Library\/Developer\/CoreSimulator\/Devices\/2AF45755-318F-48B6-8449-018E23D01D8A\/data\/Containers\/Bundle\/Application\/EADF29CE-E8E7-41A4-9F44-21ECF57770DE\/poni.app\/poni",
+    "name" : "poni",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4379656192,
+    "size" : 1540096,
+    "uuid" : "bf328ed7-9125-330c-a13b-eebfabaae756",
+    "path" : "\/Users\/USER\/Library\/Developer\/CoreSimulator\/Devices\/2AF45755-318F-48B6-8449-018E23D01D8A\/data\/Containers\/Bundle\/Application\/EADF29CE-E8E7-41A4-9F44-21ECF57770DE\/poni.app\/poni.debug.dylib",
+    "name" : "poni.debug.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4371742720,
+    "size" : 32768,
+    "uuid" : "f77d8041-529c-3659-ac12-4821c1c301fc",
+    "path" : "\/usr\/lib\/system\/libsystem_platform.dylib",
+    "name" : "libsystem_platform.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4371873792,
+    "size" : 245760,
+    "uuid" : "f30ad29e-a6a0-3f43-8f6e-3770f040794d",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4371333120,
+    "size" : 65536,
+    "uuid" : "7d5c0390-4e96-3458-ad9c-5c41b02beefd",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4373725184,
+    "size" : 49152,
+    "uuid" : "56878cbd-4b61-3d67-a830-23a1b2beaf59",
+    "path" : "\/Volumes\/VOLUME\/*\/libobjc-trampolines.dylib",
+    "name" : "libobjc-trampolines.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 6802878464,
+    "size" : 4731872,
+    "uuid" : "0c2ad407-9c4e-364d-b9a4-fc4560142a64",
+    "path" : "\/Volumes\/VOLUME\/*\/libswiftCore.dylib",
+    "name" : "libswiftCore.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 7838441472,
+    "CFBundleShortVersionString" : "6.5.4",
+    "CFBundleIdentifier" : "com.apple.SwiftUI",
+    "size" : 18523904,
+    "uuid" : "110f5834-acc6-3f0a-ab25-9776db108f7c",
+    "path" : "\/Volumes\/VOLUME\/*\/SwiftUI.framework\/SwiftUI",
+    "name" : "SwiftUI",
+    "CFBundleVersion" : "6.5.4"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  }
+],
+  "sharedCache" : {
+  "base" : 6442450944,
+  "size" : 3915218944,
+  "uuid" : "197e44a5-4546-37f4-8533-db09ce21f1e6"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=1.1G resident=0K(0%) swapped_out_or_unallocated=1.1G(100%)\nWritable regions: Total=620.4M written=1634K(0%) resident=1634K(0%) swapped_out=0K(0%) unallocated=618.8M(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nActivity Tracing                   256K        1 \nFoundation                          16K        1 \nKernel Alloc Once                   32K        1 \nMALLOC                           609.2M       29 \nMALLOC guard page                   64K        4 \nSTACK GUARD                       56.0M        3 \nStack                             9264K        3 \nVM_ALLOCATE                        128K        1 \n__DATA                            12.0M      398 \n__DATA_CONST                      51.7M      416 \n__DATA_DIRTY                       139K       11 \n__FONT_DATA                        2352        1 \n__LINKEDIT                       689.5M        8 \n__LLVM_COV                          32K        1 \n__OBJC_RO                         61.3M        1 \n__OBJC_RW                         2727K        1 \n__TEXT                           474.9M      428 \n__TPRO_CONST                       148K        2 \ndyld private memory                2.5G       11 \nmapped file                       33.1M        9 \npage table in kernel              1634K        1 \nshared memory                       48K        2 \n===========                     =======  ======= \nTOTAL                              4.4G     1333 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+
+  }
+},
+  "logWritingSignature" : "9cdb85cfc3a6625708eef163e093fe905c8ed1c1",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "645197bf528fbf3c3af54105",
+      "factorPackIds" : [
+        "663e65b4a1526e1ca0e288a1"
+      ],
+      "deploymentId" : 240000002
+    },
+    {
+      "rolloutId" : "5ffde50ce2aacd000d47a95f",
+      "factorPackIds" : [
+
+      ],
+      "deploymentId" : 250000476
+    }
+  ],
+  "experiments" : [
+    {
+      "treatmentId" : "28060e10-d4e5-4163-aa2b-d8bd088d5cbf",
+      "experimentId" : "6685b283afc7c17197d69eec",
+      "deploymentId" : 400000012
+    }
+  ]
+}
+}

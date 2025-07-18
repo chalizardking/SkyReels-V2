@@ -1,0 +1,37 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project poni.xcodeproj -scheme poni -destination "platform=iOS Simulator,name=iPhone 15" build
+
+2025-07-14 22:13:49.303 xcodebuild[61054:9607487] Writing error result bundle to /var/folders/gw/gxcqvzdd3t70vf70sh5ddmzw0000gn/T/ResultBundle_2025-14-07_22-13-0049.xcresult
+xcodebuild: error: Unable to find a device matching the provided destination specifier:
+		{ platform:iOS Simulator, OS:latest, name:iPhone 15 }
+
+	The requested device could not be found because no available devices matched the request.
+
+	Available destinations for the "poni" scheme:
+		{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+		{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+		{ platform:iOS Simulator, arch:arm64, id:630E384D-293B-4E73-AA20-6DC2719181F9, OS:18.5, name:iPad (A16) }
+		{ platform:iOS Simulator, arch:x86_64, id:630E384D-293B-4E73-AA20-6DC2719181F9, OS:18.5, name:iPad (A16) }
+		{ platform:iOS Simulator, arch:arm64, id:5D650A93-10A6-4784-ACB8-F0BF2C7FB526, OS:18.5, name:iPad Air 11-inch (M3) }
+		{ platform:iOS Simulator, arch:x86_64, id:5D650A93-10A6-4784-ACB8-F0BF2C7FB526, OS:18.5, name:iPad Air 11-inch (M3) }
+		{ platform:iOS Simulator, arch:arm64, id:D7C92AE4-FFE7-4535-AE59-19B669A31CDF, OS:18.5, name:iPad Air 13-inch (M3) }
+		{ platform:iOS Simulator, arch:x86_64, id:D7C92AE4-FFE7-4535-AE59-19B669A31CDF, OS:18.5, name:iPad Air 13-inch (M3) }
+		{ platform:iOS Simulator, arch:arm64, id:157B1101-6B94-41D0-8669-C06B73ACCE15, OS:18.5, name:iPad Pro 11-inch (M4) }
+		{ platform:iOS Simulator, arch:x86_64, id:157B1101-6B94-41D0-8669-C06B73ACCE15, OS:18.5, name:iPad Pro 11-inch (M4) }
+		{ platform:iOS Simulator, arch:arm64, id:925ADEF0-E241-4D64-B52A-9E41D1AB9347, OS:18.5, name:iPad Pro 13-inch (M4) }
+		{ platform:iOS Simulator, arch:x86_64, id:925ADEF0-E241-4D64-B52A-9E41D1AB9347, OS:18.5, name:iPad Pro 13-inch (M4) }
+		{ platform:iOS Simulator, arch:arm64, id:480AD0B4-FCD6-4E67-8520-001FC1881FB5, OS:18.5, name:iPad mini (A17 Pro) }
+		{ platform:iOS Simulator, arch:x86_64, id:480AD0B4-FCD6-4E67-8520-001FC1881FB5, OS:18.5, name:iPad mini (A17 Pro) }
+		{ platform:iOS Simulator, arch:arm64, id:2AF45755-318F-48B6-8449-018E23D01D8A, OS:18.5, name:iPhone 16 }
+		{ platform:iOS Simulator, arch:x86_64, id:2AF45755-318F-48B6-8449-018E23D01D8A, OS:18.5, name:iPhone 16 }
+		{ platform:iOS Simulator, arch:arm64, id:F9B72DD6-0908-4A52-88AE-ABB7209D6C04, OS:18.5, name:iPhone 16 Plus }
+		{ platform:iOS Simulator, arch:x86_64, id:F9B72DD6-0908-4A52-88AE-ABB7209D6C04, OS:18.5, name:iPhone 16 Plus }
+		{ platform:iOS Simulator, arch:arm64, id:13396426-E94D-453F-BF45-774720C3380E, OS:18.5, name:iPhone 16 Pro }
+		{ platform:iOS Simulator, arch:x86_64, id:13396426-E94D-453F-BF45-774720C3380E, OS:18.5, name:iPhone 16 Pro }
+		{ platform:iOS Simulator, arch:arm64, id:83B88775-700D-4872-B97D-D5EF356EB901, OS:18.5, name:iPhone 16 Pro Max }
+		{ platform:iOS Simulator, arch:x86_64, id:83B88775-700D-4872-B97D-D5EF356EB901, OS:18.5, name:iPhone 16 Pro Max }
+		{ platform:iOS Simulator, arch:arm64, id:DFD0102D-3702-4D42-B725-2E4F44EE278D, OS:18.5, name:iPhone 16e }
+		{ platform:iOS Simulator, arch:x86_64, id:DFD0102D-3702-4D42-B725-2E4F44EE278D, OS:18.5, name:iPhone 16e }
+
+	Ineligible destinations for the "poni" scheme:
+		{ platform:iOS, arch:arm64e, id:00008030-000C68592EBB802E, name:iPhone, error:iPhone’s iOS 18.3.2 doesn’t match poni.app’s iOS 18.5 deployment target. Upgrade iPhone’s iOS version or lower poni.app’s deployment target. }
